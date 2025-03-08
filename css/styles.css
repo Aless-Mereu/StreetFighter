@@ -1,20 +1,40 @@
 
+@font-face {
+    font-family: 'MiFuentePersonalizada';
+    src: url('../street.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
+:root {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --fuente-titulos: 'MiFuentePersonalizada';
+    font-size: 14px;
+}
 
 
 body {
     background-image: url('../img/fondo2.jpg');
     background-size: cover;
     background-attachment: fixed;
-    font-family:url('../street.otf');
+    font-family:var('../street.otf');
     text-align: center;
     color: white;
 }
 
 h1 {
-    font-family: url('../street.otf');
+    font-family: var(--fuente-titulos);
     color: crimson;
     font-size: 46px;
+}
+
+h2 {
+    font-family: var(--fuente-titulos);
+    color: crimson;
+    font-size: 28px;
+    text-align: center;
 }
 
 table {
@@ -24,26 +44,30 @@ table {
     border: 10px outset rgb(237, 175, 5);
     border-radius: 10px;
     background-color: black;
-    margin: 20px auto;
+    margin:20px auto;
 }
 
 table th {
-   
+    background-image: url('../img/fondocabecera.jpg');
+    font-family: var(--fuente-titulos);
     font-size: 40px;
     color: whitesmoke;
     opacity: 0.5;
+    border: 2px solid grey;
 }
 
 td {
     width: 40px;
     height: 45px;
-    font-family:url('../street.otf');
+    font-family:var(--fuente-titulos);
     font-size: 18px;
     font-weight: bold;
     color: darkorange;
     border: 2px solid grey;
     border-radius: 10px;
 }
+
+/*FORMULARIO */
 
 form {
     width: 600px;
@@ -52,28 +76,66 @@ form {
     background-color: black;
     color: white;
     border-radius: 10px;
-    margin: 20px auto;
-    padding: 20px;
+    margin: 10px auto;
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+   
 }
 
 legend {
-    font-family:url('../street.otf'), sans-serif;
+    font-family:var(--fuente-titulos);
     font-size: 14px;
     color: rgb(237, 175, 5);
+    text-align: left;
 }
 
 textarea {
     width: 560px;
 }
 
+label,input{
+    text-align: left;
+    padding-left: 5px;
+    display: flex;
+    padding: 5px;
+    margin: 2px;
+}
+
+#direccion input{
+    display: inline;
+   
+}
+
+#sexo{
+    display: flex;
+    width: auto;
+    margin-bottom: 10px;
+    padding: 2px;
+}
+#fecha-nacimiento{
+    display:flex ;
+}
+
+#personaje{
+    display: flex;
+}
+
 button {
     border: 1px solid crimson;
     background-color: crimson;
-    font-family: 'Street', sans-serif;
+    font-family: 'MiFuentePersonalizada';
     font-size: 18px;
     color: white;
     width: 200px;
     height: 50px;
     border-radius: 5px;
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 10px;
     margin-top: 10px;
+  
+   
+    
 }

@@ -14,7 +14,10 @@
 
     <table>
         <tr>
-            <th colspan="4"><img src="img/fondocabecera.jpg" alt=""></th>
+            <th colspan="4">
+                <p>STREET FIGHTER</p>
+            </th>
+
         </tr>
         <tr>
             <td>
@@ -92,27 +95,65 @@
     <h2>Formulario de Inscripción para jugar a Street Fighter</h2>
 
     <form>
-        <fieldset>
+        <fieldset id="personales">
             <legend>Datos Personales</legend>
             <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required><br>
-            <label for="apellidos">apellidos:</label>
-            <input type="text" id="apeliidos" name="apellidos" required><br>
-            <label for="DireccionPostal">DireccionPostal:</label>
-            <input type="text" id="DireccionPostal" name="DireccionPostal" required><br>
-            <label for="Nick">Nick:</label>
-            <input type="nombre" id="Nick" name="Nick" required><br>
-            <label for="email">Email:</label>
-            <input type="text" id="emal" name="email" required><br>
+            <input type="text" id="nombre" name="nombre">
+
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos">
+
+            <div id="direccion">
+                <label for="DireccionPostal">DireccionPostal:</label>
+                <input type="text" id="Calle" name="Calle" placeholder="Calle">
+                <input type="text" id="Numero" name="Numero" placeholder="Numero">
+                <input type="text" id="Piso" name="Piso" placeholder="Piso">
+                <input type="text" id="Codigo Postal" name="Codigo Postal" placeholder="Cod.Postal">
+                <input type="text" id="Ciudad" name="Ciudad" placeholder="Ciudad">
+            </div>
+            <div id="Nick">
+                <label for="Nick">Nick:</label>
+                <input type="nombre" id="Nick" name="Nick">
+            </div>
+            <div id="email">
+                <label for="Correo electronico">Correo Electronico:</label>
+                <input type="text" id="email" name="Correo elecronico">
+            </div>
         </fieldset>
-        <fieldset>
-            <legend>Sexo</legend>
+
+        <fieldset id="sexo">
+            <legend>Sexo Usuario</legend>
             <input type="radio" name="sexo" value="Hombre">Hombre
             <label for="sexo"></label>
-            <input type="radio" name="sexo" value="Mujer"> Mujer 
-            <input type="radio" name="sexo" value="No da info"> Prefiero no decir
-            
+            <input type="radio" name="sexo" value="Mujer"> Mujer
+            <label for="sexo"></label>
+            <input type="radio" name="sexo" value="NoDecir"> Prefiero no decir
+            <label for="sexo"></label>
         </fieldset>
+
+        <fieldset>
+            <div id="fecha-nacimiento">
+                <label for="fecha-nacimiento">Fecha de nacimiento: </label>
+                <input type="date" name="fecha-nacimiento" value="fecha-nacimiento">
+            </div>
+        </fieldset>
+
+        <fieldset id="personaje">
+            <legend>Personaje favorito</legend>
+            <label for="personaje">Selecciona un personaje:</label>
+            <select name="personajes" id="personajes">
+                <option value="Ryu">Ryu</option>
+                <option value="Ken">Ken</option>
+                <option value="Guille">Guille</option>
+                <option value="Blanka"> Blanka</option>
+                <option value="Chun Li">Chun Li</option>
+                <option value="Honda">Honda</option>
+                <option value="Cammy">Cammy</option>
+                <option value="Dhalsim">Dhalsim</option>
+                <option value="Vega">Vega</option>
+            </select>
+        </fieldset>
+
         <fieldset>
             <legend>Comentarios</legend>
             <textarea id="comentarios" name="comentarios" rows="5" cols="30"></textarea>
